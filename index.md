@@ -1,7 +1,7 @@
 ## Projeto para Auxílio em cálculos repetitivos de laboratórios de Física
 
-### Programa 1: 
-### Programa 2:
+### Programa 1: [Desvio Padrão](https://github.com/rafaelsiqueira100/ProjetoLabFisica/blob/gh-pages/desvio_padrao.exe)
+### Programa 2: [Desvio Padrão Repetidos](https://github.com/rafaelsiqueira100/ProjetoLabFisica/blob/gh-pages/desvio_padrao_repetidos.exe)
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
