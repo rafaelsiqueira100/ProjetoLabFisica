@@ -4,7 +4,69 @@ Olá! Bem-vindo à página de divulgação dos projetos para auxílio à gradua�
 
 
 ### Programa 1: [Desvio Padrão e Média](https://github.com/rafaelsiqueira100/ProjetoLabFisica/raw/gh-pages/desvio_padrao.zip)
+<input type="text"><input type="button value="Calcular">
+
 ### Programa 2: [Desvio Padrão e Média(Quando há Valores Repetidos)](https://github.com/rafaelsiqueira100/ProjetoLabFisica/raw/gh-pages/desvio_padrao_repetidos.zip)
+<input type="text">
+
 
 <!--[Logo](https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png)-->
 <img src="https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png" alt="drawing" width="200" style="text-align: center"/>
+ <script>
+  
+    function main() {
+  let desvio_padrao, i, media, somatoria, somatoria_dp, valor, valor$
+  somatoria = 0;
+  valores = [];
+  input = document.getElementById("input");
+  valores_string = input.split(' ');
+
+  for (i=0; i&lt;valores_string.length; i= i+1) {
+    valor_string = valores_string[i];
+    valor = Number.parseFloat(valor_string);
+    somatoria += valor;
+    valores[i] = valor;
+  }
+
+  media = somatoria / i;
+  somatoria_dp = 0;
+
+  for (i=0; i&lt;valores.length; i=i+1) {
+    valor = valores[i];
+    somatoria_dp += Math.pow(valor - media, 2);
+  }
+
+  desvio_padrao = Math.sqrt(somatoria_dp / i);
+  document.getElementById(&quot;desvio_padrao&quot;) = desvio_padrao;
+  document.getElementById(&quot;media&quot;) = media;
+  document.getElementById(&quot;desvio_padrao_media&quot;) = desvio_padrao/(Ma$
+}
+    
+  function main2(){
+      let desvio_padrao, i, media, somatoria, somatoria_dp, valor, valor$
+      somatoria = 0;
+      valores = [];
+      input = document.getElementById("input");
+      valores_string = input.split(' ');
+
+      for (i=0; i&lt;valores_string.length; i= i+1) {
+        valor_string = valores_string[i];
+        valor = Number.parseFloat(valor_string);
+        somatoria += valor;
+        valores[i] = valor;
+      }
+
+      media = somatoria / i;
+      somatoria_dp = 0;
+
+      for (i=0; i&lt;valores.length; i=i+1) {
+        valor = valores[i];
+        somatoria_dp += Math.pow(valor - media, 2);
+      }
+
+      desvio_padrao = Math.sqrt(somatoria_dp / i);
+      document.getElementById(&quot;desvio_padrao&quot;) = desvio_padrao;
+      document.getElementById(&quot;media&quot;) = media;
+      document.getElementById(&quot;desvio_padrao_media&quot;) = desvio_padrao/(Ma$
+  }
+  </script>
