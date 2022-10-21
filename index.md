@@ -4,17 +4,27 @@ Olá! Bem-vindo à página de divulgação dos projetos para auxílio à gradua�
 
 
 ### Programa 1: Desvio Padrão e Média<!--(https://github.com/rafaelsiqueira100/ProjetoLabFisica/raw/gh-pages/desvio_padrao.zip)-->
-<input type="text"><button onclick="main();">Calcular</button>
+<textarea id="input"></textarea>
+<button onclick="main();">Calcular</button>
+
+<input type="text" id="desvio_padrao" readonly>
+<input type="text" id="media" readonly>
+<input type="text" id="desvio_padrao_media" readonly>
 
 ### Programa 2: Desvio Padrão e Média(Quando há Valores Repetidos)<!--(https://github.com/rafaelsiqueira100/ProjetoLabFisica/raw/gh-pages/desvio_padrao_repetidos.zip)-->
-<input type="text"><button onclick="main2();">Calcular</button>
+<textarea id="valores"></textarea>
+<input type="number" id="n">
+<button onclick="main2();">Calcular</button>
+
+<input type="text" id="desvio_padrao" readonly>
+<input type="text" id="media" readonly>
+<input type="text" id="desvio_padrao_media" readonly>
 
 
 <!--[Logo](https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png)-->
 <img src="https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png" alt="drawing" width="200" style="text-align: center"/>
-```js
-module.exports.response = response = () => {
-
+<script
+>
   
     function main() {
   let desvio_padrao, i, media, somatoria, somatoria_dp, valor, valores, valores_string; 
@@ -45,32 +55,41 @@ module.exports.response = response = () => {
 }
     
   function main2(){
-      let desvio_padrao, i, media, somatoria, somatoria_dp, valor, valores;
-      somatoria = 0;
-      valores = [];
-      input = document.getElementById("input");
-      valores_string = input.split(' ');
+      let desvio_padrao, i, media, n, qtd_tentativas, somatoria, somatoria_dp, valor, valores;
+  n = document.getElementById("n");
+  i = 0;
+  somatoria = 0;
+  valores_string = document.getElementById("valores");
+  valores = valores_string.split("/\r?\n/");
+  let k = 0;
+  while (i < n) {
+    campos = valores[k].split(' ');
+    qtd_tentativas = Number.parseInt(campos[0]);
+    valor = Number.parseFloat(campos[1]);
+    somatoria += valor * qtd_tentativas;
 
-      for (i=0; i<valores_string.length; i= i+1) {
-        valor_string = valores_string[i];
-        valor = Number.parseFloat(valor_string);
-        somatoria += valor;
-        valores[i] = valor;
-      }
+    for (let j=0; j<qtd_tentativas; j++) {
+      valores[valores.length] = valor;
+    }
 
-      media = somatoria / i;
-      somatoria_dp = 0;
+    i += qtd_tentativas;
+    k += 1;
+  }
 
-      for (i=0; i<valores.length; i=i+1) {
-        valor = valores[i];
-        somatoria_dp += Math.pow(valor - media, 2);
-      }
+  media = somatoria / n;
+  somatoria_dp = 0;
 
-      desvio_padrao = Math.sqrt(somatoria_dp / i);
-      document.getElementById("desvio_padrao") = desvio_padrao;
-      document.getElementById("media") = media;
-      document.getElementById("desvio_padrao_media") = desvio_padrao/(Math.sqrt(n));
+  for (let k=0; k<valores.length; k++) {
+    valor = valores[k];
+    somatoria_dp += Math.pow(valor - media, 2);
+  }
+
+  desvio_padrao = Math.sqrt(somatoria_dp / n);
+  document.getElementById("desvio_padrao").text = desvio_padrao.toString();
+  document.getElementById("media").text = media.toString();
+  document.getElementById("desvio_padrao_media") = desvio_padrao/(Math.sqrt(n));
+
+
   }
  
-  }
-  ```
+</script>
