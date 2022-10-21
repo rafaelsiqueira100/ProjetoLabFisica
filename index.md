@@ -4,16 +4,17 @@ Olá! Bem-vindo à página de divulgação dos projetos para auxílio à gradua�
 
 
 ### Programa 1: Desvio Padrão e Média<!--(https://github.com/rafaelsiqueira100/ProjetoLabFisica/raw/gh-pages/desvio_padrao.zip)-->
-<input type="text"><button onclick="main();">Calcular</button>
+<input type="text">[button onclick="main();" value="Calcular"]
 
 ### Programa 2: Desvio Padrão e Média(Quando há Valores Repetidos)<!--(https://github.com/rafaelsiqueira100/ProjetoLabFisica/raw/gh-pages/desvio_padrao_repetidos.zip)-->
-<input type="text"><button onclick="main2();">Calcular</button>
+<input type="text">[button onclick="main2();" value="Calcular"]
 
 
 <!--[Logo](https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png)-->
 <img src="https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png" alt="drawing" width="200" style="text-align: center"/>
- <script>
- 
+{% for js in page.customjs %}
+ <script async type="text/javascript" src="{{ js }}"></script>
+ {% endfor %}
   
     function main() {
   let desvio_padrao, i, media, somatoria, somatoria_dp, valor, valores, valores_string; 
