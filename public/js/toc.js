@@ -1,3 +1,6 @@
+window.$docsify{
+	executeScript: true,
+};
 
 function main() {
   let desvio_padrao, i, media, somatoria, somatoria_dp, valor, valores, valores_string; 
