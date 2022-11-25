@@ -23,8 +23,7 @@ Desvio Padrão da Média Calculado:<input type="text" id="desvio_padrao_media" r
 
 <!--[Logo](https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png)-->
 <img src="https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png" alt="drawing" width="200" style="text-align: center"/>
-<script
->
+<script\>
   
   
   
@@ -94,4 +93,4 @@ Desvio Padrão da Média Calculado:<input type="text" id="desvio_padrao_media" r
 
   }
  
-</script>
+</script\>
