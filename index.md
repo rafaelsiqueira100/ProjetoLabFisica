@@ -7,24 +7,26 @@ Olá! Bem-vindo à página de divulgação dos projetos para auxílio à gradua�
 <textarea id="input"></textarea>
 <button onclick="main();">Calcular</button>
 
-<input type="text" id="desvio_padrao" readonly>
-<input type="text" id="media" readonly>
-<input type="text" id="desvio_padrao_media" readonly>
+Desvio Padrão Calculado: <input type="text" id="desvio_padrao" readonly>
+Média Calculada: <input type="text" id="media" readonly>
+Desvio Padrão da Média Calculado: <input type="text" id="desvio_padrao_media" readonly>
 
 ### Programa 2: Desvio Padrão e Média(Quando há Valores Repetidos)<!--(https://github.com/rafaelsiqueira100/ProjetoLabFisica/raw/gh-pages/desvio_padrao_repetidos.zip)-->
 <textarea id="valores"></textarea>
 <input type="number" id="n">
 <button onclick="main2();">Calcular</button>
 
-<input type="text" id="desvio_padrao" readonly>
-<input type="text" id="media" readonly>
-<input type="text" id="desvio_padrao_media" readonly>
+Desvio Padrão Calculado: <input type="text" id="desvio_padrao" readonly>
+Média Calculada: <input type="text" id="media" readonly>
+Desvio Padrão da Média Calculado:<input type="text" id="desvio_padrao_media" readonly>
 
 
 <!--[Logo](https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png)-->
 <img src="https://user-images.githubusercontent.com/20904543/178299055-027d25c3-5855-4793-b3d0-8dd10b66976a.png" alt="drawing" width="200" style="text-align: center"/>
 <script
 >
+  
+  
   
     function main() {
   let desvio_padrao, i, media, somatoria, somatoria_dp, valor, valores, valores_string; 
