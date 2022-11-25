@@ -26,8 +26,7 @@ Desvio Padrão da Média Calculado:<input type="text" id="desvio_padrao_media2">
 <br>
 
  
-
-<script>
+```js script
  document.getElementById("desvio_padrao").readOnly = true; 
   document.getElementById("desvio_padrao2").readOnly = true; 
   document.getElementById("media").readOnly = true; 
@@ -126,4 +125,5 @@ function main() {
   document.getElementById("desvio_padrao_media").readOnly = true; 
   document.getElementById("desvio_padrao_media2").readOnly = true; 
 
-  }</script>
+  }
+  ```
